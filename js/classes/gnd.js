@@ -16,15 +16,8 @@ class GND {
     }
   }
   update(state) {
-    if (state.curr != state.Play ) return
-
-    // If player is dashing, move the ground DASH_MULTIPLIER times faster
-    if (isPipeDashing.t) {
-      this.x -= dx * DASH_MULTIPLIER
-    } else {
-      this.x -= dx
-    }
-    
+    if (state.curr != state.Play) return
+    this.x -= dx
     this.x = this.x % (this.sprite.width / 4)
   }
   sizeChange(sizeRatio) {
